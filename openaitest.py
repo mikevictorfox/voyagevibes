@@ -6,7 +6,7 @@ app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*")
 
 # Set your OpenAI API key here
-openai.api_key = "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"
+openai.api_key = "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"
 
 @app.route('/')
 def index():
@@ -30,4 +30,4 @@ def generate_response(prompt):
     return response.choices[0].text.strip()
 
 if __name__ == '__main__':
- socketio.run(app, host='0.0.0.0', port=8000)
+ socketio.run(app, host='0.0.0.0', port=8100)
